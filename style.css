@@ -12,7 +12,7 @@
   --dark-brown: hsl(25, 47%, 15%);
   --medium-brown: hsl(28, 10%, 53%);
   --very-pale-orange: hsl(33, 100%, 98%);
-
+  
   /*Font*/
   --family: 'DM Sans', sans-serif;
   --font-size: 16px;
@@ -23,6 +23,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+span {
+  display: none;
+}
+
+span::before {
+  content: '$ ';
 }
 
 main {
@@ -103,6 +111,7 @@ p {
   color: var(--medium-brown);
   height: 12%;
   width: 12%;
+  transition: all 2s ease-in-out;
 }
 
 #higher-spending {
@@ -114,7 +123,7 @@ p {
 }
 
 .mon {
-  height: 20%;
+  height: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -126,11 +135,11 @@ p {
   background-color: var(--soft-red-opacity);
 }
 
-.mon:hover:before {
+.mon:hover > span {
   background-color: var(--dark-brown);
   border-radius: 4px;
   color: var(--very-pale-orange);
-  content: '$20.00';
+  display: block;
   text-align: center;
   top: -2rem;
   padding: .3rem;
@@ -145,7 +154,7 @@ p {
 }
 
 .tue {
-  height: 40%;
+  height: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -157,15 +166,16 @@ p {
   background-color: var(--soft-red-opacity);
 }
 
-.tue:hover:before {
+.tue:hover > span {
   background-color: var(--dark-brown);
   border-radius: 4px;
   color: var(--very-pale-orange);
-  content: '$40.00';
+  display: block;
   text-align: center;
   top: -2rem;
   padding: .3rem;
   position: absolute;
+  width: max-content;
 }
 
 .tue::after {
@@ -176,7 +186,7 @@ p {
 }
 
 .wed {
-  height: 60%;
+  height: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -188,15 +198,16 @@ p {
   background-color: var(--soft-red-opacity);
 }
 
-.wed:hover:before {
+.wed:hover > span {
   background-color: var(--dark-brown);
   border-radius: 4px;
   color: var(--very-pale-orange);
-  content: '$60.00';
+  display: block;
   text-align: center;
   top: -2rem;
   padding: .3rem;
   position: absolute;
+  width: max-content;
 }
 
 .wed::after {
@@ -207,7 +218,7 @@ p {
 }
 
 .thu {
-  height: 35%;
+  height: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -219,15 +230,16 @@ p {
   background-color: var(--soft-red-opacity);
 }
 
-.thu:hover:before {
+.thu:hover > span {
   background-color: var(--dark-brown);
   border-radius: 4px;
   color: var(--very-pale-orange);
-  content: '$35.00';
+  display: block;
   text-align: center;
   top: -2rem;
   padding: .3rem;
   position: absolute;
+  width: max-content;
 }
 
 .thu::after {
@@ -238,7 +250,7 @@ p {
 }
 
 .fri {
-  height: 30%;
+  height: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -250,15 +262,16 @@ p {
   background-color: var(--soft-red-opacity);
 }
 
-.fri:hover:before {
+.fri:hover > span {
   background-color: var(--dark-brown);
   border-radius: 4px;
   color: var(--very-pale-orange);
-  content: '$30.00';
+  display: block;
   text-align: center;
   top: -2rem;
   padding: .3rem;
   position: absolute;
+  width: max-content;
 }
 
 .fri::after {
@@ -269,7 +282,7 @@ p {
 }
 
 .sat {
-  height: 50%;
+  height: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -281,15 +294,16 @@ p {
   background-color: var(--soft-red-opacity);
 }
 
-.sat:hover:before {
+.sat:hover > span {
   background-color: var(--dark-brown);
   border-radius: 4px;
   color: var(--very-pale-orange);
-  content: '$50.00';
+  display: block;
   text-align: center;
   top: -2rem;
   padding: .3rem;
   position: absolute;
+  width: max-content;
 }
 
 .sat::after {
@@ -300,7 +314,7 @@ p {
 }
 
 .sun {
-  height: 30%;
+  height: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -312,15 +326,16 @@ p {
   background-color: var(--soft-red-opacity);
 }
 
-.sun:hover:before {
+.sun:hover > span {
   background-color: var(--dark-brown);
   border-radius: 4px;
   color: var(--very-pale-orange);
-  content: '$30.00';
+  display: block;
   text-align: center;
   top: -2rem;
   padding: .3rem;
   position: absolute;
+  width: max-content;
 }
 
 .sun::after {
