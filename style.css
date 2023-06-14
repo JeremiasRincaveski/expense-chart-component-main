@@ -47,7 +47,7 @@ main {
 }
 
 .container {
-  width: min(90%, 450px);
+  width: min(90%, 550px);
 }
 
 p {
