@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+:root {
+  /*Primary*/
+  --cyan: hsl(186, 34%, 60%);
+  --cyan-opacity: hsla(186, 34%, 60%, .7);
+  --soft-red: hsl(10, 79%, 65%);
+  --soft-red-opacity: hsla(10, 79%, 65%, .7);
+  
+  /*Neutral*/
+  --cream: hsl(27, 66%, 92%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+
+  /*Font*/
+  --family: 'DM Sans', sans-serif;
+  --font-size: 16px;
+  --weights: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: var(--cream);
+  color: var(--dark-brown);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--family);
+  font-size: var(--font-size);
+  font-weight: var(--weights);
+  height: 100vh;
+  justify-content: center;
+  place-items: center;
+}
+
+.container {
+  width: min(90%, 450px);
+}
+
+p {
+  color: var(--medium-brown);
+}
+
+.spent {
+  align-items: center;
+  background-color: var(--soft-red);
+  box-sizing: content-box;
+  border-radius: 15px;
+  display: flex;
+  font-size: 1.5rem;
+  height: 130px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+}
+
+.spent__texts {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.spent__title, .spent__amount {
+  color: var(--very-pale-orange);
+}
+
+.spent__amount {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.spent__amount::before {
+  content: '$';
+}
+
+.lastWeek {
+  background-color: var(--very-pale-orange);
+  border-radius: 15px;
+  font-weight: 500;
+  padding: 1.5rem 1rem;
+}
+
+.lastWeek__spent {
+  align-items: flex-end;
+  border-bottom: 2px solid var(--cream);
+  display: flex;
+  height: 300px;
+  font-size: .8rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 3.5rem;
+  width: 100%;
+}
+
+.dayWeek {
+  background-color: var(--soft-red);
+  border-radius: 6px;
+  color: var(--medium-brown);
+  height: 12%;
+  width: 12%;
+}
+
+#higher-spending {
+  background-color: var(--cyan);
+}
+
+#higher-spending:hover {
+  background-color: var(--cyan-opacity);
+}
+
+.mon {
+  height: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mon:hover {
+  cursor: pointer;
+  background-color: var(--soft-red-opacity);
+}
+
+.mon:hover:before {
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  color: var(--very-pale-orange);
+  content: '$20.00';
+  text-align: center;
+  top: -2rem;
+  padding: .3rem;
+  position: absolute;
+}
+
+.mon::after {
+  content: 'mon';
+  position: absolute;
+  bottom: -1.5rem;
+  opacity: .7;
+}
+
+.tue {
+  height: 40%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tue:hover {
+  cursor: pointer;
+  background-color: var(--soft-red-opacity);
+}
+
+.tue:hover:before {
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  color: var(--very-pale-orange);
+  content: '$40.00';
+  text-align: center;
+  top: -2rem;
+  padding: .3rem;
+  position: absolute;
+}
+
+.tue::after {
+  content: 'tue';
+  position: absolute;
+  bottom: -1.5rem;
+  opacity: .7;
+}
+
+.wed {
+  height: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wed:hover {
+  cursor: pointer;
+  background-color: var(--soft-red-opacity);
+}
+
+.wed:hover:before {
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  color: var(--very-pale-orange);
+  content: '$60.00';
+  text-align: center;
+  top: -2rem;
+  padding: .3rem;
+  position: absolute;
+}
+
+.wed::after {
+  content: 'wed';
+  position: absolute;
+  bottom: -1.5rem;
+  opacity: .7;
+}
+
+.thu {
+  height: 35%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thu:hover {
+  cursor: pointer;
+  background-color: var(--soft-red-opacity);
+}
+
+.thu:hover:before {
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  color: var(--very-pale-orange);
+  content: '$35.00';
+  text-align: center;
+  top: -2rem;
+  padding: .3rem;
+  position: absolute;
+}
+
+.thu::after {
+  content: 'thu';
+  position: absolute;
+  bottom: -1.5rem;
+  opacity: .7;
+}
+
+.fri {
+  height: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fri:hover {
+  cursor: pointer;
+  background-color: var(--soft-red-opacity);
+}
+
+.fri:hover:before {
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  color: var(--very-pale-orange);
+  content: '$30.00';
+  text-align: center;
+  top: -2rem;
+  padding: .3rem;
+  position: absolute;
+}
+
+.fri::after {
+  content: 'fri';
+  position: absolute;
+  bottom: -1.5rem;
+  opacity: .7;
+}
+
+.sat {
+  height: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.sat:hover {
+  cursor: pointer;
+  background-color: var(--soft-red-opacity);
+}
+
+.sat:hover:before {
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  color: var(--very-pale-orange);
+  content: '$50.00';
+  text-align: center;
+  top: -2rem;
+  padding: .3rem;
+  position: absolute;
+}
+
+.sat::after {
+  content: 'sat';
+  position: absolute;
+  bottom: -1.5rem;
+  opacity: .7;
+}
+
+.sun {
+  height: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sun:hover {
+  cursor: pointer;
+  background-color: var(--soft-red-opacity);
+}
+
+.sun:hover:before {
+  background-color: var(--dark-brown);
+  border-radius: 4px;
+  color: var(--very-pale-orange);
+  content: '$30.00';
+  text-align: center;
+  top: -2rem;
+  padding: .3rem;
+  position: absolute;
+}
+
+.sun::after {
+  content: 'sun';
+  position: absolute;
+  bottom: -1.5rem;
+  opacity: .7;
+}
+
+.monthly {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.monthly__total {
+  color: var(--medium-brown);
+  font-weight: 100;
+  margin: 1rem 0;
+}
+
+.monthly__total--amount {
+  color: var(--dark-brown);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: .3rem;
+}
+
+.monthly__total--amount::before {
+  content: '$';
+}
+
+.monthly__progress {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+}
+
+.monthly__progress--percentage {
+  color: var(--dark-brown);
+  font-weight: 700;
+  margin-top: .3rem;
+}
